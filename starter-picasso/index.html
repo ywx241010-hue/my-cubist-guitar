@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Picasso Cubist Guitar</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- p5.js + p5.sound：先用国内镜像 npmmirror，打不开就自动换成 jsDelivr -->
+  <script src="https://registry.npmmirror.com/p5/1.11.10/files/lib/p5.min.js"></script>
+  <script>window.p5 || document.write('<script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.min.js"><\/script>')</script>
+  <script src="https://registry.npmmirror.com/p5/1.11.10/files/lib/addons/p5.sound.min.js"></script>
+  <script>(window.p5 && window.p5.SoundFile) || document.write('<script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/addons/p5.sound.min.js"><\/script>')</script>
+  <!-- MediaPipe 手势模型在 sketch.js 里面加载 -->
+  <script src="sketch.js"></script>
+</head>
+<body>
+  <div id="intro">
+    <div class="card">
+      <h1>立体主义吉他</h1>
+      <p class="sub">致敬 巴勃罗·毕加索的吉他拼贴（1912–1914）</p>
+      <ul>
+        <li><b>画面左边的手按和弦：</b>✊ Am · 🖐 C · ☝️ G · ✌️ F · 🤟 E · 👍 Dm</li>
+        <li><b>画面右边的手扫弦：</b>快速向下 = 下扫，快速向上 = 上扫</li>
+        <li>只有一只手时：换一个手势，就自动扫一下</li>
+        <li>每个和弦是毕加索的一个时期：蓝色时期、玫瑰时期、立体主义……</li>
+        <li>按键：<kbd>1</kbd>–<kbd>6</kbd> 和弦 + 下扫 · <kbd>空格</kbd> 上扫 · <kbd>S</kbd> 保存 · <kbd>V</kbd> 摄像头 · <kbd>I</kbd> 手势信息</li>
+      </ul>
+      <button id="start">开始弹奏</button>
+    </div>
+  </div>
+  <div id="status"></div>
+</body>
+</html>
